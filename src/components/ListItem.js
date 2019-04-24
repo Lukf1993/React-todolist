@@ -2,16 +2,14 @@ import React from 'react';
 import ControlListButtons from '../components/ControlListButtons';
 
 class ListItem extends React.Component {
-    // state = {
-    //     title: "",
-    //     status: false,
-    //     checked: false,
-    //     id: Math.floor((Math.random() * 100)),
-    // }
+    onChangee = () => {
+        this.props.changeStatus(this.props.id)
+    }
+
     render() {
         return(
             <li>
-                <input type='checkbox'></input>
+                <input type='checkbox' onChange={this.onChangee}></input>
                     <label>
                         <strong>{this.props.title}<p>{this.props.status}</p>
                         </strong>
@@ -22,5 +20,7 @@ class ListItem extends React.Component {
         )
     }
 }
+
+
 
 export default ListItem;
