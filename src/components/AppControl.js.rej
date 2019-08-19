@@ -1,0 +1,9 @@
+diff a/src/components/AppControl.js b/src/components/AppControl.js	(rejected hunks)
+@@ -24,7 +24,6 @@
+   }
+ 
+     return (
+-            <Select.Option value="tomorrow">Jutro</Select.Option>
+       <Context.Consumer>
+         {(context) => (
+           <div>

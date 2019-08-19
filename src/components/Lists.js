@@ -1,18 +1,20 @@
 import React from 'react';
 import ListItem from '../components/ListItem'
-class Lists extends React.Component {
+import {Typography} from 'antd';
 
-    render() {
-        return(
-            <ul>{this.props.list.map((item) => (<ListItem {...item}
-                    key={item.id}
-                    removeItem={this.props.removeItem}
-                    changeStatus={this.props.changeStatus}
-                    />))}
-                {/* {this.state.list.map((item) => (<ListItem featured item={item} />))} */}
-            </ul>
-        )
-    }
+function Lists(props) {
+  return(
+    <div>
+    <Typography.Text code>{props.day === "today" ? 'Dziś' : 'Jutro'}</Typography.Text>
+      <ul className="list">
+        {props.list.map(
+          (item) => (<ListItem {...item} key={item.id} saveList={props.saveList} />)
+        )}
+      </ul>
+    </div>
+  )
 }
 
 export default Lists;
+
+
