@@ -6,7 +6,7 @@
     "@lls/react-light-calendar": "^2.0.4",
     "antd": "^3.20.0",
     "firebase": "^6.2.0",
-    "firebase-admin": "^8.1.0",
+    "firebase-admin": "^11.4.1",
     "http2": "^3.3.7",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
